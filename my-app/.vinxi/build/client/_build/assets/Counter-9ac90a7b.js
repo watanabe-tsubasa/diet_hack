@@ -1,0 +1,1 @@
+import{m as a,k as o,p as l,t as n}from"./routing-3bc1c28f.js";var s=n('<button class="w-[200px] rounded-full bg-gray-100 border-2 border-gray-300 focus:border-gray-400 active:border-gray-400 px-[2rem] py-[1rem]">Clicks: ');function u(){const[e,t]=o(0);return(()=>{var r=s();return r.firstChild,r.$$click=()=>t(e()+1),l(r,e,null),r})()}a(["click"]);export{u as C};

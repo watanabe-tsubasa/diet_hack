@@ -1,0 +1,50 @@
+{
+  "_Counter-9be41ab3.js": {
+    "file": "assets/Counter-9be41ab3.js"
+  },
+  "_components-86ea9901.js": {
+    "file": "assets/components-86ea9901.js"
+  },
+  "src/routes/[...404].tsx?pick=default&pick=$css": {
+    "file": "_...404_.js",
+    "imports": [
+      "_components-86ea9901.js"
+    ],
+    "isDynamicEntry": true,
+    "isEntry": true,
+    "src": "src/routes/[...404].tsx?pick=default&pick=$css"
+  },
+  "src/routes/about.tsx?pick=default&pick=$css": {
+    "file": "about.js",
+    "imports": [
+      "_Counter-9be41ab3.js",
+      "_components-86ea9901.js"
+    ],
+    "isDynamicEntry": true,
+    "isEntry": true,
+    "src": "src/routes/about.tsx?pick=default&pick=$css"
+  },
+  "src/routes/index.tsx?pick=default&pick=$css": {
+    "file": "index.js",
+    "imports": [
+      "_Counter-9be41ab3.js",
+      "_components-86ea9901.js"
+    ],
+    "isDynamicEntry": true,
+    "isEntry": true,
+    "src": "src/routes/index.tsx?pick=default&pick=$css"
+  },
+  "virtual:#vinxi/handler/ssr": {
+    "dynamicImports": [
+      "src/routes/[...404].tsx?pick=default&pick=$css",
+      "src/routes/[...404].tsx?pick=default&pick=$css",
+      "src/routes/about.tsx?pick=default&pick=$css",
+      "src/routes/about.tsx?pick=default&pick=$css",
+      "src/routes/index.tsx?pick=default&pick=$css",
+      "src/routes/index.tsx?pick=default&pick=$css"
+    ],
+    "file": "ssr.js",
+    "isEntry": true,
+    "src": "virtual:#vinxi/handler/ssr"
+  }
+}
