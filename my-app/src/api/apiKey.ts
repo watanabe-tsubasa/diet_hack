@@ -1,0 +1,1 @@
+export const API_KEY = process.env.STEIN_URL || 'invalid_API_KEY';
