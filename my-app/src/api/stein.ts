@@ -9,9 +9,13 @@ interface dataType {
 }
 
 export const getAllData = async (): Promise<dataType[]> => {
-  const res = await fetch(`${API_KEY}/default`);
-  const json = await res.json();
-  return json
+  try {
+    const res = await fetch(`${API_KEY}/default`);
+    const json = await res.json();
+    return json
+  } catch (error) {
+    throw new Error(`error: ${error}`)
+  }
 }
 
 export const getData = async (
@@ -24,9 +28,13 @@ export const getData = async (
     "month": month.toString(),
     "day": day.toString(),
   }
-  const res = await fetch(`${API_KEY}/default?search=${JSON.stringify(serchQuery)}`);
-  const json = await res.json();
-  return json
+  try {
+    const res = await fetch(`${API_KEY}/default?search=${JSON.stringify(serchQuery)}`);
+    const json = await res.json();
+    return json    
+  } catch (error) {
+    throw new Error(`error: ${error}`)
+  }
 }
 
 // const serchedData = await getData(2024, 1, 17);
@@ -52,16 +60,19 @@ export const postNewData = async (
     "count": count.toString(),
   };
 
-  const res = await fetch(`${API_KEY}/default`,
-  {
-    method: 'POST',
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify([body])
-  });
-  const json = await res.json();
-  return json
+  try {
+    const res = await fetch(`${API_KEY}/default`, {
+      method: 'POST',
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify([body])
+    });
+    const json = await res.json();
+    return json
+  } catch (error) {
+    throw new Error(`error: ${error}`)
+  }
 };
 
 // const result = await postNewData(2024, 1, 17, 40, 10);
